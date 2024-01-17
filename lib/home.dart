@@ -23,6 +23,7 @@ class HomePage extends StatelessWidget {
         child: FutureBuilder(
           future: futureJson,
           builder: (ctx, snapshot) {
+            print(snapshot.data?.entries.toString());
             if (snapshot.hasData) {
               return filledWidget(snapshot.data!);
             }
